@@ -1,4 +1,3 @@
-from turtle import down
 import streamlit as st
 from transformers import BertTokenizerFast, BertForSequenceClassification
 import torch
