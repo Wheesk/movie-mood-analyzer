@@ -1,0 +1,6 @@
+streamlit
+transformers
+torch
+streamlit-lottie
+requests
+gdown
