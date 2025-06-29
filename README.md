@@ -16,7 +16,7 @@ Paste any movie review in the text box — get an instant sentiment prediction w
 
 - Sentiment analysis using a fine-tuned BERT model
 - Loads the model weights dynamically (hosted via Google Drive to keep the repo light)
-- Stylish Streamlit UI with gradient background and Lottie animations
+- Stylish Streamlit UI with background and Lottie animations
 - Responsive design — works on desktop & mobile
 - Fully containerized — easy to deploy on Streamlit Cloud
 
@@ -38,7 +38,7 @@ Paste any movie review in the text box — get an instant sentiment prediction w
 # Example in app.py:
 import gdown
 
-url = "https://drive.google.com/uc?id=<your_file_id>"
+url = "https://drive.google.com/uc?id=id"
 output = "bert_sentiment_epoch1.pth"
 gdown.download(url, output, quiet=False)
 ```
