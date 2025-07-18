@@ -18,7 +18,7 @@ if not os.path.exists(MODEL_PATH):
 
 # Device Setup
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-print(f"✅ Using device: {device}")
+print(f"Using device: {device}")
 
 
 # Cache Model Loading
@@ -38,7 +38,7 @@ tokenizer, model = load_model()
 def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
-        st.error("⚠️ Failed to load Lottie animation.")
+        st.error("Failed to load Lottie animation.")
         return None
     return r.json()
 
@@ -127,8 +127,8 @@ if st.button("🔍 Analyze Sentiment"):
                 predicted = torch.argmax(probs).item()
                 confidence = probs[0][predicted].item()
 
-        label = "Positive 😊" if predicted == 1 else "Negative 😠"
-        st.subheader(f"📊 Result: {label}")
+        label = "Positive " if predicted == 1 else "Negative 😠"
+        st.subheader(f"Result: {label}")
         st.write(f"Confidence: {confidence:.2%}")
 
         if predicted == 1 and lottie_success:
